@@ -1,0 +1,76 @@
+#section-compte{
+    margin-top:116px;
+}
+
+.container-compte{
+    height: auto;
+    padding: 2% 20% 2% 20%;
+}
+.container-compte h1{
+    text-align: center;
+}
+.container-compte a{
+    text-decoration: none;
+}
+
+.container-compte button{
+    display: block;
+    margin: 0 auto;
+
+    text-align: center;
+    font-size: 20px;
+    color: white;
+
+    background-color: #2c6db8;
+}
+
+.container-compte-image{
+    height: 100%;
+    width: 70%;
+    margin-left: 15%;
+    padding-top: 2%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.div-compte-imgage{
+    height: auto;
+    width: 48%;
+}
+
+.div-compte-imgage img{
+    height: 300px;
+    width: 95%;
+    padding-top: 2%;
+}
+
+/* OFFRES CLIENTS */
+.wrap-price-compte {
+    color: rgba(255, 255, 255, 0.8);
+    padding: 20px 10px 20px;
+    border-radius: 10px;
+    margin-top: 5%;
+}
+
+.color-div-compte-1{
+    background-color: #2c6db8;
+}
+.color-div-compte-2{
+    background-color: #20247b;
+}
+
+@media screen and (max-width: 992px) {
+    .container-compte-image{
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+    }
+    .div-compte-imgage{
+        height: auto;
+        width:100%;
+    }
+    .div-compte-imgage img{
+        height: 300px;
+        width: 100%;
+    }
+}

@@ -1,0 +1,27 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+#section-connexion{
+    height: 92vh;
+    width: 100%;
+    margin-top: 116px ;
+}
+
+#container-flui-connexion{
+    margin: 0;
+    padding: 0;
+    height: auto;
+}
+
+.div-connexion-form{
+    height: 70%;
+    width: 60%;
+    margin-left: 20%;
+    padding:10% 5% 10% 5%;
+}
+
+.div-connexion-form h1{
+    text-align: center;
+}
