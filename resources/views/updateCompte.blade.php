@@ -10,7 +10,7 @@
                     @csrf
                     <div class="form-group">
                         <label for="username" class="form-label">Nom d'utilisateur :</label>
-                        <input type="text" class="form-control @error('username') is-invalid @enderror" id="username" name="username"placeholder="">
+                        <input type="text" class="form-control @error('username') is-invalid @enderror" id="username" name="username" placeholder="" value="{{ $username }}">
                         @error('username')
                             <span class="text-danger">{{ $message }}</span>
                         @enderror
@@ -26,7 +26,7 @@
                     <br>
                     <div class="form-group">
                         <label for="email" class="form-label">Adresse email :</label>
-                        <input type="email" class="form-control @error('email') is-invalid @enderror" id="email" name="email">
+                        <input type="email" class="form-control @error('email') is-invalid @enderror" id="email" name="email" value="{{ $email }}">
                         @error('email')
                             <span class="text-danger">{{ $message }}</span>
                         @enderror
@@ -35,9 +35,9 @@
                     <div class="form-group">
                         <label for="civilite" class="form-label">Civilité :</label>
                         <select class="form-select" name="civilite">
-                            <option value="Madame">Madame</option>
-                            <option value="Monsieur">Monsieur</option>
-                            <option value="Autres">Autres</option>
+                            <option value="Madame" {{ $civilite == 'Madame' ? 'selected' : '' }}>Madame</option>
+                            <option value="Monsieur" {{ $civilite == 'Monsieur' ? 'selected' : '' }}>Monsieur</option>
+                            <option value="Autres" {{ $civilite == 'Autres' ? 'selected' : '' }}>Autres</option>
                         </select>
                     </div>
                     <div class="form-submit mt-5">

@@ -10,7 +10,23 @@ class UpdateController extends Controller
 {
     public function index()
     {
-        return view('updateCompte');
+        $authFilePath = base_path('resources/data/connexion.txt');
+        $dataFilePath = base_path('resources/data/data.txt');
+
+        $authData = File::get($authFilePath);
+        $data = File::get($dataFilePath);
+
+        // Séparez les données dans un tableau
+        $authData = explode(':', $authData);
+        $data = explode(':', $data);
+
+        // Récupérez les valeurs individuelles
+        $username = $authData[0];
+        $email = $data[0];
+        $civilite = $data[1];
+
+        // Passez les données à la vue
+        return view('updateCompte', compact('username', 'email', 'civilite'));
     }
 
     public function update(Request $request){
