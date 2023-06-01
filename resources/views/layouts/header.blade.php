@@ -51,7 +51,10 @@
 
                     @if(Session::has('user'))
                         <li class="nav-item">
-                            <a class="nav-link" style="color:#2c6db8;"href="{{ route('vue_update') }}#rdv">PROFIL</a>
+                            <a class="nav-link" style="color:#2c6db8;"href="{{ route('vue_conpte') }}">PACK D'OFFRE</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" style="color:#2c6db8;"href="{{ route('vue_update') }}">PROFIL</a>
                         </li>
                     @endif
                     <li class="nav-item" style="text-align:right">

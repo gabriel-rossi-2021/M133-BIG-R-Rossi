@@ -40,6 +40,30 @@
                             <option value="Autres" {{ $civilite == 'Autres' ? 'selected' : '' }}>Autres</option>
                         </select>
                     </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="rue" class="form-label">Rue :</label>
+                        <input type="text" class="form-control @error('rue') is-invalid @enderror" id="rue" name="rue" placeholder="" value="{{ $rue }}">
+                        @error('rue')
+                            <span class="text-danger">{{ $message }}</span>
+                        @enderror
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="npa" class="form-label">NPA :</label>
+                        <input type="number" min="1000" max="9658" class="form-control @error('npa') is-invalid @enderror" id="npa" name="npa" placeholder="" value="{{ $npa }}">
+                        @error('npa')
+                            <span class="text-danger">{{ $message }}</span>
+                        @enderror
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="ville" class="form-label">Ville :</label>
+                        <input type="text" class="form-control @error('ville') is-invalid @enderror" id="ville" name="ville" placeholder="" value="{{ $ville }}">
+                        @error('ville')
+                            <span class="text-danger">{{ $message }}</span>
+                        @enderror
+                    </div>
                     <div class="form-submit mt-5">
                         <button style="background:#2c6db8;color:white;width:100%;"class="btn btn-common" type="submit">Envoyer</button>
                     </div>
